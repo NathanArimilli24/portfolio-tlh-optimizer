@@ -196,14 +196,11 @@ Every lot carries an <code style="font-family:'DM Mono',monospace;font-size:0.82
 </p>
 <div class="vise-code"><span class="cm"># TaxEngine.classify: IRS "more than one year"</span>
 days = (close_date - open_date).days
-
 <span class="kw">if</span> days &gt; <span class="s">365</span>:
     gain_type = <span class="s">'LT'</span>  <span class="cm"># 366+ days = long-term, 20%</span>
 <span class="kw">else</span>:
     gain_type = <span class="s">'ST'</span>  <span class="cm"># 365 or fewer = short-term, 35%</span>
-
-<span class="cm"># Happens at LOT level: one sell order
-# can realize both ST and LT events.</span></div>
+<span class="cm"># One sell order can realize both ST and LT events.</span></div>
         """, unsafe_allow_html=True)
 
     with col2:
@@ -308,10 +305,9 @@ with tab3:
 <div class="vise-code"><span class="cm"># Within the year, net by character first:</span>
 taxable_st = st_gains - st_losses   <span class="cm"># then cross-net</span>
 taxable_lt = lt_gains - lt_losses
-
-<span class="cm"># Up to $3,000 of net loss offsets ordinary income.
-# Excess ST loss stays ST; excess LT loss stays LT,
-# carried forward to future years unchanged.</span></div>
+<span class="cm"># Up to $3,000 of net loss offsets ordinary income.</span>
+<span class="cm"># Excess ST loss stays ST; excess LT loss stays LT,</span>
+<span class="cm"># carried forward to future years unchanged.</span></div>
         """, unsafe_allow_html=True)
 
     with col2:
@@ -319,7 +315,6 @@ taxable_lt = lt_gains - lt_losses
         st.markdown("""
 <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1rem;line-height:1.7;">Transaction cost is a single round-trip rate (12 bps = 5 commission + 5 slippage + 2 bid-ask), embedded on every trade. Buys cost more and sells net less:</p>
 <div class="vise-code">cost_rate = (<span class="s">5</span> + <span class="s">5</span> + <span class="s">2</span>) / <span class="s">10000</span>  <span class="cm"># 12 bps</span>
-
 buy_cash  = shares * price * (<span class="s">1</span> + cost_rate)
 net_proceeds = shares * price * (<span class="s">1</span> - cost_rate)
 gain = net_proceeds - cost_basis
