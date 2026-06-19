@@ -1,7 +1,7 @@
 """
 conftest.py
 ===========
-Pytest configuration: mock Streamlit and gdown so that any test which imports
+Pytest configuration: mock Streamlit so that any test which imports
 portfolio_returns_engine.py (the Streamlit app file) does not crash on missing
 server infrastructure.
 
@@ -81,7 +81,6 @@ def _make_streamlit_mock():
 
 
 sys.modules.setdefault("streamlit", _make_streamlit_mock())
-sys.modules.setdefault("gdown", MagicMock())
 
 
 # ─────────────────────────────────────────────────────────────────────────────

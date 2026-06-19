@@ -86,7 +86,7 @@ print("✅ Libraries loaded.")
 import gdown
 
 DATA_PATH = Path("price_data.parquet")
-FILE_ID = "1pMQ817V05j4RK0vqJcVkBMmOBK5zRrug"
+FILE_ID = "REDACTED_DATA_FILE_ID"
 
 if not DATA_PATH.exists():
     print("⬇️  Downloading price data from Google Drive...")

@@ -233,10 +233,10 @@ comparison isolates the effect of harvesting alone.</p>
 full 20-year window, where the replacement-tracking gap has the longest time to compound.</p>
 {regime_table(s['regime'])}
 <p>Decomposing the net value-add by portfolio shows what is really happening. <b>Tax saved is positive for
-every portfolio</b> (harvesting cut tax in 75% to 96% of runs), so as a tax tool TLH works. The net
-outcome, however, is decided by replacement tracking: it is strongly positive for the diversified 3-ETF
-and 2-ETF mixes and strongly negative for the two model-ETF portfolios. Tax was cut in
-{ov['taxcut_min']:.0f}% to {ov['taxcut_max']:.0f}% of runs depending on the portfolio.</p>
+every portfolio</b>, so as a tax tool TLH works. The net outcome, however, is decided by replacement
+tracking: it is strongly positive for the diversified 3-ETF and 2-ETF mixes and strongly negative for the
+two model-ETF portfolios. Tax was cut in {ov['taxcut_min']:.0f}% to {ov['taxcut_max']:.0f}% of runs,
+depending on the portfolio.</p>
 {decomp_table(s['port'])}
 <p>The reason is the replacement map. Several large-cap style holdings in the model portfolios (for example
 the S&amp;P 500 Growth and Russell 1000 Growth sleeves) are replaced by a broad S&amp;P 100 fund, which
