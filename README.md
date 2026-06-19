@@ -1,8 +1,11 @@
 ![CI](https://github.com/NathanArimilli24/portfolio-tlh-optimizer/actions/workflows/ci.yml/badge.svg)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://portfolio-tlh-optimizer.streamlit.app)
 
 # Portfolio Returns Calculator
 
 ### Tax-Aware Portfolio Rebalancing and Tax-Loss-Harvesting Simulation Engine
+
+**Live app:** https://portfolio-tlh-optimizer.streamlit.app
 
 ![Dashboard](Dashboard.png)
 
@@ -84,6 +87,8 @@ The full ranked recommendations and the per-run decomposition live in `Backtest/
 ---
 
 ## Running the App
+
+The deployed app is live at **https://portfolio-tlh-optimizer.streamlit.app**. To run it locally:
 
 ```bash
 pip install -r requirements.txt
