@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.Rhistory
+.idea/
+.vscode/
+
+# Claude Code local settings (never commit)
+.claude/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Raw / oversized data (regenerate with scripts/prepare_data.py)
+data/price_data.csv
+data/SM_Prototype.xlsx
+*.csv.gz
+
+# Local-only portfolio bundle
+website/
+
+# Temp Excel lock files
+~$*.xlsx
+~$*.xls
